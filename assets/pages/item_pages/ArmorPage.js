@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function ClassPage({ navigation }) {
+export default function ArmorPage({ navigation }) {
     return (
         <View style={styles.container}>
             <Text>
-                This will have every class listed here
+                Armors
             </Text>
-      </View>
+        </View>
     );
   }
 
@@ -16,11 +16,5 @@ export default function ClassPage({ navigation }) {
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
-    },
-    text: {
-        color: '#000000',
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
   });

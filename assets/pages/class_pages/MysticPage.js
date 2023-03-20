@@ -17,4 +17,10 @@ export default function MysticPage({ navigation }) {
       alignItems: 'center',
       justifyContent: 'center',
     },
+    text: {
+        color: '#000000',
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
   });

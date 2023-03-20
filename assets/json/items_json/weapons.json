@@ -1,0 +1,95 @@
+{
+    "weapon": [
+ 
+       {
+          "id": "1",
+          "name": "Assult Cannon",
+          "type": "Martial Blaster",
+          "properties": "Burst 4, Power Cell (range 90/360), Reload 4, Strength 15, Two-handed",
+          "cost": "1550",
+          "weight": "15",
+          "damage": "1d12 Energy"
+       },
+       {
+            "id": "2",
+            "name": "BKG",
+            "type": "Martial Blaster",
+            "properties": "Auto, Burst 2, Disintergrate 13, Power Cell (range 120/480), Reload 2, Strength 19, Two-handed, Vicious 1",
+            "cost": "2750",
+            "weight": "19",
+            "damage": "3d4 Energy"
+       },
+       {
+            "id": "3",
+            "name": "Beam Rifle",
+            "type": "Martial Blaster",
+            "properties": "Penetrating 2, Power Cell (range 150/600), Reload 2, Strength 15, Two-handed",
+            "cost": "1850",
+            "weight": "16",
+            "damage": "2d6 Energy"
+        },
+        {
+            "id": "4",
+            "name": "Bitesaber",
+            "type": "Martial Melee Weapon",
+            "properties": "Bitting 13, Hidden, Luminous, Versatile (2d4)",
+            "cost": "1800",
+            "weight": "2.5",
+            "damage": "1d6 Acid"
+        },
+        {
+            "id": "5",
+            "name": "Blaster Carbine",
+            "type": "Simple Blaster",
+            "properties": "Power Cell (range 70/280), Reload 16, Two-handed",
+            "cost": "425",
+            "weight": "5.5",
+            "damage": "1d6 Energy"
+        },
+        {
+            "id": "6",
+            "name": "Blaster Pistol",
+            "type": "Simple Blaster",
+            "properties": "Power Cell (range 50/200), Reload 16",
+            "cost": "175",
+            "weight": "2.5",
+            "damage": "1d6 Energy"
+        },
+        {
+            "id": "7",
+            "name": "Blaster Rifle",
+            "type": "Martial Blaster",
+            "properties": "Power Cell (range 105/420), Reload 12, Two-handed",
+            "cost": "525",
+            "weight": "7.5",
+            "damage": "1d8 Energy"
+        },
+        {
+            "id": "8",
+            "name": "Blightsaber",
+            "type": "Martial Melee Weapon",
+            "properties": "Corruption 13, Hidden, Versatile (2d4)",
+            "cost": "1800",
+            "weight": "2.5",
+            "damage": "1d6 Necrotic"
+        },
+        {
+            "id": "9",
+            "name": "Bowcaster",
+            "type": "Martial Blaster",
+            "properties": "Burst 4, Power Cell (range 50/200), Reload 4, Strength 13, Two-handed",
+            "cost": "1150",
+            "weight": "11",
+            "damage": "1d10 Energy"
+        },
+        {
+            "id": "10",
+            "name": "Brightsaber",
+            "type": "Martial Melee Weapon",
+            "properties": "Bright 13, Hidden, Luminous, Versatile (1d8)",
+            "cost": "1800",
+            "weight": "2.5",
+            "damage": "1d6 Fire"
+        }
+    ]
+ }

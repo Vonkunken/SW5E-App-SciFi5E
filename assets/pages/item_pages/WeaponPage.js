@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native';
+import weapons from '../../json/items_json/weapons.json'
 
-export default function ClassPage({ navigation }) {
+export default function WeaponPage({ navigation }) {
+    var weaponsArray = weapons.weapon.map(Object.values)
+    console.log(weaponsArray)
     return (
         <View style={styles.container}>
             <Text>
-                This will have every class listed here
+                Weapons
             </Text>
-      </View>
+        </View>
     );
   }
 
@@ -16,11 +19,5 @@ export default function ClassPage({ navigation }) {
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
-    },
-    text: {
-        color: '#000000',
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
   });

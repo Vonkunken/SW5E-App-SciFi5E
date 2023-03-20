@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function ClassPage({ navigation }) {
+export default function MonkPage({ navigation }) {
     return (
         <View style={styles.container}>
             <Text>
-                This will have every class listed here
+                Monk, version of monk
             </Text>
       </View>
     );
@@ -12,10 +12,10 @@ export default function ClassPage({ navigation }) {
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     text: {
         color: '#000000',
@@ -24,3 +24,4 @@ export default function ClassPage({ navigation }) {
         justifyContent: 'center',
     },
   });
+

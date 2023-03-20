@@ -1,21 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function ClassPage({ navigation }) {
+export default function ScoutPage({ navigation }) {
     return (
         <View style={styles.container}>
             <Text>
-                This will have every class listed here
+                Scout, version of scout/ranger
             </Text>
-      </View>
+        </View>
     );
   }
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     text: {
         color: '#000000',
@@ -24,3 +24,4 @@ export default function ClassPage({ navigation }) {
         justifyContent: 'center',
     },
   });
+
