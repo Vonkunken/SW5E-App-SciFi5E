@@ -90,6 +90,15 @@
             "cost": "1800",
             "weight": "2.5",
             "damage": "1d6 Fire"
-        }
+        },
+        {
+            "id": "",
+            "name": "",
+            "type": "",
+            "properties": "",
+            "cost": "",
+            "weight": "",
+            "damage": ""
+        },
     ]
  }
