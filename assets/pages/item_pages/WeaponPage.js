@@ -44,7 +44,7 @@ export default function WeaponPage({ navigation }) {
 //   }
 
   function iconChecker(weaponType) {
-    if(weaponType == "Martial Blaster" || weaponType == "Simple Blaster") {
+    if(weaponType === "Martial Blaster" || weaponType === "Simple Blaster") {
         return <MaterialCommunityIcons name="pistol" size={36} color="black" style="item3"/>
     } else {
         return <MaterialCommunityIcons name="sword" size={36} color="black" style="item3"/>
