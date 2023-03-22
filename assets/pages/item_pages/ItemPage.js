@@ -11,6 +11,11 @@ export default function ItemPage({ navigation }) {
                     Weapons
                 </Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('WeaponProperties')}>
+                <Text>
+                    Weapon Properties
+                </Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Armor')}>
                 <Text>
                     Armor
@@ -26,6 +31,7 @@ export default function ItemPage({ navigation }) {
                     Enhanced Equipment
                 </Text>
             </TouchableOpacity>
+            
         </View>
     );
   }

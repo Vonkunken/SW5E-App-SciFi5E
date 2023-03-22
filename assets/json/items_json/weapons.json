@@ -92,13 +92,67 @@
             "damage": "1d6 Fire"
         },
         {
-            "id": "",
+            "id": "11",
+            "name": "Broadsaber",
+            "type": "Martial Melee Weapon",
+            "properties": "Dexterity 13, Dire 1, Luminous, Versatile (1d8)",
+            "cost": "100",
+            "weight": "2.75",
+            "damage": "2d4 Energy"
+        },
+        {
+            "id": "12",
+            "name": "Bustersaber",
+            "type": "Martial Melee Weapon",
+            "properties": "Brutal 1, Dexterity 19, Heavy, Keen 1, Luminous, Reach, Two-handed",
+            "cost": "2900",
+            "weight": "7.25",
+            "damage": "1d12 Energy"
+        },
+        {
+            "id": "13",
+            "name": "Carbine Rifle",
+            "type": "Martial Blaster",
+            "properties": "Auto, Power cell (range 90/360), Rapid 3, Reload 12, Strength 11, Two-handed",
+            "cost": "925",
+            "weight": "8.5",
+            "damage": "1d8 Energy"
+        },
+        {
+            "id": "14",
+            "name": "Chaingun",
+            "type": "Martial Blaster",
+            "properties": "Auto, Rapid 2, Reload 8, Slug cartridge (range 80/320), Strength 13, Two-handed, Vicious 1",
+            "cost": "1325",
+            "weight": "10.5",
+            "damage": "2d4 Kinetic"
+        },
+        {
+            "id": "15",
+            "name": "Chakram",
+            "type": "Martial Melee Weapon",
+            "properties": "Finesse, Returning, Thrown (range 30/90)",
+            "cost": "175",
+            "weight": "3",
+            "damage": "1d6 Kinetic"
+        },
+        {
+            "id": "16",
+            "name": "Crossguard Saber",
+            "type": "Martial Melee Weapon",
+            "properties": "Defensive 1, Dexterity 13, Heavy, Luminous, Versatile (1d10)",
+            "cost": "",
+            "weight": "",
+            "damage": ""
+        },
+        {
+            "id": "17",
             "name": "",
             "type": "",
             "properties": "",
             "cost": "",
             "weight": "",
             "damage": ""
-        },
+        }
     ]
  }

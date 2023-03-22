@@ -23,6 +23,7 @@ import WeaponPage from './assets/pages/item_pages/WeaponPage';
 import ArmorPage from './assets/pages/item_pages/ArmorPage';
 import AdventuringGearPage from './assets/pages/item_pages/AdventuringGearPage';
 import EnhancedEquipmentPage from './assets/pages/item_pages/EnhancedEquipmentPage';
+import CustomWeapons from './assets/pages/item_pages/CustomWeapons';
 
 const Stack = createStackNavigator();
 
@@ -69,6 +70,7 @@ function ItemsScreen() {
             <Stack.Screen name="Armor" component={ArmorPage} />
             <Stack.Screen name="EnhancedEquipment" component={EnhancedEquipmentPage} />
             <Stack.Screen name="Weapon" component={WeaponPage} />
+            <Stack.Screen name="WeaponProperties" component={CustomWeapons} />
         </Stack.Navigator>
     )
 }
@@ -79,10 +81,10 @@ export default function App() {
   return (
     <NavigationContainer>
         <Drawer.Navigator initialRouteName="Home">
-            <Drawer.Screen name="HomeScreen" component={HomeScreen} />
-            <Drawer.Screen name="ClassScreen" component={ClassScreen} />
-            <Drawer.Screen name="SpeciesScreen" component={SpeciesScreen} />
-            <Drawer.Screen name="ItemsScreen" component={ItemsScreen} />
+            <Drawer.Screen name="HomeScreen" component={HomeScreen} options={{ title: "Home"}}/>
+            <Drawer.Screen name="ClassScreen" component={ClassScreen} options={{ title: "Classes"}}/>
+            <Drawer.Screen name="SpeciesScreen" component={SpeciesScreen} options={{ title: "Species"}}/>
+            <Drawer.Screen name="ItemsScreen" component={ItemsScreen} options={{ title: "Items"}}/>
         </Drawer.Navigator>
     </NavigationContainer>
     
