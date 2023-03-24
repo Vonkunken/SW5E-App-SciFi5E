@@ -1,17 +1,31 @@
+import React, {useState, useEffect } from 'react';
 import { Dimensions, FlatList, StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import weapons from '../../json/items_json/weapons.json';
+//import weapons from '../../json/items_json/weapons.json';
+import equipment from '../../json/equipment.json';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+let sortedArray = JSON.parse(JSON.stringify(equipment));
+
 export default function WeaponPage({ navigation }) {
-    console.log(weapons);
+    sortedArray.sort();
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+ 
+    setData(sortedArray);
+ 
+    }, []);
+    
+    
     return (
         <View style={styles.container}>
             <FlatList 
-                data={weapons.weapon}
+                data={typeChecker(data)}
                 renderItem={({item}) =>
                 <View style={{ flexDirection:"row"}}>
-                    {iconChecker(item.type)}
+                    {iconChecker(item.weaponClassification)}
                     <TouchableOpacity
                     style={styles.item}
                     // onPress={() => onPressHandlerItem}
@@ -22,16 +36,9 @@ export default function WeaponPage({ navigation }) {
                     style={styles.item2}
                     // onPress={() => onPressHandlerItem}
                     >
-                    <Text style={styles.text}>{item.damage}</Text>
+                    <Text style={styles.text}>{damageComposer(item)}</Text>
                     </TouchableOpacity>
                 </View>}
-                /* <TouchableOpacity>
-                    style={styles.item}
-                    // onPress={() => onPressHandlerItem}
-                    >
-                    <Text style={styles.text}>{item.name}</Text>
-                    <Text style={styles.text}>{item.damage}</Text>
-                </TouchableOpacity> */
             />
         </View>
     );
@@ -42,14 +49,33 @@ export default function WeaponPage({ navigation }) {
 //         id: weapons[itemID-1].id
 //     });
 //   }
+  function damageComposer(weapon){
+    let damage = "";
+    damage = weapon.damageNumberOfDice + "d" + weapon.damageDieType + " " + weapon.damageType;
+    if(damage === "0d0 Unknown"){
+        damage = "Special";
+    }
+    return damage;
+  }
 
+  function typeChecker(category) {
+    let tmpArray = [];
+    for (let i = 0; i < category.length; i++) {
+        if (category[i].equipmentCategory === "Weapon"){
+            tmpArray.push(category[i]);
+        }
+    }
+    return tmpArray;
+  }
+  
   function iconChecker(weaponType) {
-    if(weaponType === "Martial Blaster" || weaponType === "Simple Blaster") {
-        return <MaterialCommunityIcons name="pistol" size={36} color="black" style="item3"/>
+    if(weaponType === "MartialBlaster" || weaponType === "SimpleBlaster") {
+        return <MaterialCommunityIcons name="pistol" size={Dimensions.get('window').width * 0.1} color="black" style="item3"/>
     } else {
-        return <MaterialCommunityIcons name="sword" size={36} color="black" style="item3"/>
+        return <MaterialCommunityIcons name="sword" size={Dimensions.get('window').width * 0.1} color="black" style="item3"/>
     }
   }
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
