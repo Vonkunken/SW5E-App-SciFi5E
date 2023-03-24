@@ -5,10 +5,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import equipment from '../../json/equipment.json';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-let sortedArray = JSON.parse(JSON.stringify(equipment));
+let sortedArray = typeChecker(equipment);
 
 export default function WeaponPage({ navigation }) {
-    sortedArray.sort();
+    sortedArray.sort((a, b) => a.name.localeCompare(b.name));
 
     const [data, setData] = useState([]);
 
@@ -22,19 +22,20 @@ export default function WeaponPage({ navigation }) {
     return (
         <View style={styles.container}>
             <FlatList 
-                data={typeChecker(data)}
+                data={data}
+                extraData={data}
                 renderItem={({item}) =>
                 <View style={{ flexDirection:"row"}}>
                     {iconChecker(item.weaponClassification)}
                     <TouchableOpacity
                     style={styles.item}
-                    // onPress={() => onPressHandlerItem}
+                    onPress={() => onPressHandlerItem(item)}
                     >
                     <Text style={styles.text}>{item.name}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                     style={styles.item2}
-                    // onPress={() => onPressHandlerItem}
+                    onPress={() => onPressHandlerItem(item)}
                     >
                     <Text style={styles.text}>{damageComposer(item)}</Text>
                     </TouchableOpacity>
@@ -44,11 +45,15 @@ export default function WeaponPage({ navigation }) {
     );
   }
 
-//   function onPressHandlerItem(itemID) {
-//     navigation.navigate('', {
-//         id: weapons[itemID-1].id
-//     });
-//   }
+  function log(log) {
+    console.log(log);
+  }
+
+  function onPressHandlerItem(item) {
+    navigation.navigate('WeaponDetails', {
+        item: JSON.stringify(item)
+    });
+  }
   function damageComposer(weapon){
     let damage = "";
     damage = weapon.damageNumberOfDice + "d" + weapon.damageDieType + " " + weapon.damageType;

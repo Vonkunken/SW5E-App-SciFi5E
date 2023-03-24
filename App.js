@@ -24,6 +24,7 @@ import ArmorPage from './assets/pages/item_pages/ArmorPage';
 import AdventuringGearPage from './assets/pages/item_pages/AdventuringGearPage';
 import EnhancedEquipmentPage from './assets/pages/item_pages/EnhancedEquipmentPage';
 import CustomWeapons from './assets/pages/item_pages/CustomWeapons';
+import WeaponDetailsPage from './assets/pages/item_pages/WeaponDetailsPage';
 
 const Stack = createStackNavigator();
 
@@ -71,6 +72,7 @@ function ItemsScreen() {
             <Stack.Screen name="EnhancedEquipment" component={EnhancedEquipmentPage} />
             <Stack.Screen name="Weapon" component={WeaponPage} />
             <Stack.Screen name="WeaponProperties" component={CustomWeapons} />
+            <Stack.Screen name="WeaponDetails" component={WeaponDetailsPage} />
         </Stack.Navigator>
     )
 }
