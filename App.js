@@ -1,7 +1,7 @@
-import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { NavigationContainer, StackActions, DefaultTheme, useTheme } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator} from '@react-navigation/stack';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, StyleSheet, Text, useColorScheme } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import ClassPage from "./assets/pages/class_pages/ClassPage";
@@ -27,12 +27,22 @@ import EnhancedEquipmentPage from './assets/pages/item_pages/EnhancedEquipmentPa
 import CustomWeapons from './assets/pages/item_pages/CustomWeapons';
 import WeaponDetailsPage from './assets/pages/item_pages/WeaponDetailsPage';
 
+const theme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: 'rgb(255, 45, 85)',
+      background: 'rgb(0, 0, 0)',
+      text:'rgb(255, 255, 255)'
+    },
+  };
 const Stack = createStackNavigator();
 
 function HomeScreen() {
+  const { colors } = useTheme();
     return (
         <SafeAreaView>
-            <Text>
+            <Text style={{ color: '#fff'}}>
                 This is very temp, needs a lot of revision
             </Text>
         </SafeAreaView>
@@ -81,9 +91,10 @@ function ItemsScreen() {
 const Drawer = createDrawerNavigator();
 
 export default function App() {
+    const scheme = useColorScheme();
   return (
-    <NavigationContainer>
-        <Drawer.Navigator initialRouteName="HomeScreen" screenOptions={{ headerShown: false, swipeEdgeWidth: Dimensions.get('window').width}}>
+    <NavigationContainer theme={theme}>
+        <Drawer.Navigator initialRouteName="HomeScreen" screenOptions={{ headerShown: false, swipeEdgeWidth: Dimensions.get('window').width, drawerStyle: {backgroundColor: '#000'}}}>
             <Drawer.Screen name="HomeScreen" component={HomeScreen} options={{ title: "Home"}}/>
             <Drawer.Screen name="ClassScreen" component={ClassScreen} options={{ title: "Classes"}}/>
             <Drawer.Screen name="SpeciesScreen" component={SpeciesScreen} options={{ title: "Species"}}/>
