@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import { Dimensions, FlatList, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 //import weapons from '../../json/items_json/weapons.json';
 import equipment from '../../json/equipment.json';
@@ -11,16 +12,12 @@ export default function WeaponPage({ navigation }) {
     sortedArray.sort((a, b) => a.name.localeCompare(b.name));
 
     const [data, setData] = useState([]);
-
     useEffect(() => {
- 
     setData(sortedArray);
- 
     }, []);
     
-    
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <FlatList 
                 data={data}
                 extraData={data}
@@ -29,7 +26,7 @@ export default function WeaponPage({ navigation }) {
                     {iconChecker(item.weaponClassification)}
                     <TouchableOpacity
                     style={styles.item}
-                    onPress={() => onPressHandlerItem(item)}
+                    onPress={() => navigation.navigate('WeaponDetails', {item: JSON.stringify(item)})}
                     >
                     <Text style={styles.text}>{item.name}</Text>
                     </TouchableOpacity>
@@ -41,19 +38,10 @@ export default function WeaponPage({ navigation }) {
                     </TouchableOpacity>
                 </View>}
             />
-        </View>
+        </SafeAreaView>
     );
   }
 
-  function log(log) {
-    console.log(log);
-  }
-
-  function onPressHandlerItem(item) {
-    navigation.navigate('WeaponDetails', {
-        item: JSON.stringify(item)
-    });
-  }
   function damageComposer(weapon){
     let damage = "";
     damage = weapon.damageNumberOfDice + "d" + weapon.damageDieType + " " + weapon.damageType;
