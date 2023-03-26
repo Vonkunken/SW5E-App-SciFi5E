@@ -8,13 +8,13 @@ export default function WeaponDetailsPage({ route, navigation }) {
     console.log(thisItem);
     return (
         <SafeAreaView style={styles.container}>
-            <Text>{thisItem.name}</Text>
-            <Text>{fixType(thisItem.weaponClassification)}</Text>
-            <Text>{formatProperties(thisItem.propertiesJson)}</Text>
-            <Text>{thisItem.cost}</Text>
-            <Text>{thisItem.weight}</Text>
-            <Text>{damageComposer(thisItem)}</Text>
-            <Text>{thisItem.contentSource}</Text>
+            <Text style={styles.text}>{thisItem.name}</Text>
+            <Text style={styles.text}>{fixType(thisItem.weaponClassification)}</Text>
+            <Text style={styles.text}>{formatProperties(thisItem.propertiesJson)}</Text>
+            <Text style={styles.text}>{thisItem.cost}</Text>
+            <Text style={styles.text}>{thisItem.weight}</Text>
+            <Text style={styles.text}>{damageComposer(thisItem)}</Text>
+            <Text style={styles.text}>{thisItem.contentSource}</Text>
         </SafeAreaView>
     );
   }
@@ -57,7 +57,7 @@ export default function WeaponDetailsPage({ route, navigation }) {
     let formatted = property.replace(/[\[\]"]+/g, '');
     return formatted;
   }
-
+  // replace this with a verison that takes the properties json data and loops through it for its length adding them to a string with each loop then return that
   function damageComposer(weapon){
     let damage = "";
     damage = weapon.damageNumberOfDice + "d" + weapon.damageDieType + " " + weapon.damageType;
@@ -70,7 +70,7 @@ export default function WeaponDetailsPage({ route, navigation }) {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#000',
       alignItems: 'center',
       justifyContent: 'center',
     },

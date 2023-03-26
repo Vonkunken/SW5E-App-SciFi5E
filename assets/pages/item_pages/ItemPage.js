@@ -8,7 +8,7 @@ export default function ItemPage({ navigation }) {
                 Items
             </Text>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Weapon', { navigation })}>
-                <Text>
+                <Text style={styles.text}>
                     Weapons
                 </Text>
             </TouchableOpacity>
@@ -19,17 +19,17 @@ export default function ItemPage({ navigation }) {
             </TouchableOpacity> */}
             {/*this button is unneeded for SW5E, its here as I'm working on idea for my own personal version, ignore this for the time being*/}
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Armor', { navigation })}>
-                <Text>
+                <Text style={styles.text}>
                     Armor
                 </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('AdventuringGear', { navigation })}>
-                <Text>
+                <Text style={styles.text}>
                     Adventuring Gear
                 </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('EnhancedEquipment', { navigation })}>
-                <Text>
+                <Text style={styles.text}>
                     Enhanced Equipment
                 </Text>
             </TouchableOpacity>
@@ -41,7 +41,7 @@ export default function ItemPage({ navigation }) {
   const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#000',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -53,5 +53,11 @@ export default function ItemPage({ navigation }) {
         borderRadius: 15,
         alightItems: 'center',
         justifyContent: 'center',
+    }, 
+    text: {
+        color: '#ffffff',
+        alignItems: 'center',
+        fontSize: 24,
+        height: 32,
     }
   });

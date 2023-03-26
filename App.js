@@ -94,7 +94,7 @@ export default function App() {
     const scheme = useColorScheme();
   return (
     <NavigationContainer theme={theme}>
-        <Drawer.Navigator initialRouteName="HomeScreen" screenOptions={{ headerShown: false, swipeEdgeWidth: Dimensions.get('window').width, drawerStyle: {backgroundColor: '#000'}}}>
+        <Drawer.Navigator initialRouteName="HomeScreen" screenOptions={{ headerShown: false, swipeEdgeWidth: Dimensions.get('window').width * 0.8, drawerStyle: {backgroundColor: '#000'}}}>
             <Drawer.Screen name="HomeScreen" component={HomeScreen} options={{ title: "Home"}}/>
             <Drawer.Screen name="ClassScreen" component={ClassScreen} options={{ title: "Classes"}}/>
             <Drawer.Screen name="SpeciesScreen" component={SpeciesScreen} options={{ title: "Species"}}/>

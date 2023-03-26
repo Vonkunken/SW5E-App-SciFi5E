@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react';
-import { Dimensions, FlatList, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, FlatList, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+//import { TouchableOpacity } from 'react-native-gesture-handler';
 //import weapons from '../../json/items_json/weapons.json';
 import equipment from '../../json/equipment.json';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -32,7 +32,7 @@ export default function WeaponPage({ navigation }) {
                     </TouchableOpacity>
                     <TouchableOpacity
                     style={styles.item2}
-                    onPress={() => onPressHandlerItem(item)}
+                    onPress={() => navigation.navigate('WeaponDetails', {item: JSON.stringify(item)})}
                     >
                     <Text style={styles.text}>{damageComposer(item)}</Text>
                     </TouchableOpacity>
@@ -63,16 +63,16 @@ export default function WeaponPage({ navigation }) {
   
   function iconChecker(weaponType) {
     if(weaponType === "MartialBlaster" || weaponType === "SimpleBlaster") {
-        return <MaterialCommunityIcons name="pistol" size={Dimensions.get('window').width * 0.1} color="black" style="item3"/>
+        return <MaterialCommunityIcons name="pistol" size={Dimensions.get('window').width * 0.1} color="white" style="item3"/>
     } else {
-        return <MaterialCommunityIcons name="sword" size={Dimensions.get('window').width * 0.1} color="black" style="item3"/>
+        return <MaterialCommunityIcons name="sword" size={Dimensions.get('window').width * 0.1} color="white" style="item3"/>
     }
   }
 
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#000',
       alignItems: 'center',
       justifyContent: 'center',
     },
