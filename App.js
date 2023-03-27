@@ -1,7 +1,7 @@
 import { NavigationContainer, StackActions, DefaultTheme, useTheme } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator} from '@react-navigation/stack';
-import { Dimensions, StyleSheet, Text, useColorScheme } from 'react-native';
+import { Dimensions, StyleSheet, Text, useColorScheme, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import ClassPage from "./assets/pages/class_pages/ClassPage";
@@ -32,7 +32,7 @@ const theme = {
     colors: {
       ...DefaultTheme.colors,
       primary: 'rgb(255, 45, 85)',
-      background: 'rgb(0, 0, 0)',
+      background: 'rgb(32, 32, 32)',
       text:'rgb(255, 255, 255)'
     },
   };
@@ -42,6 +42,7 @@ function HomeScreen() {
   const { colors } = useTheme();
     return (
         <SafeAreaView>
+            <StatusBar barStyle={'#fff'}/>
             <Text style={{ color: '#fff'}}>
                 This is very temp, needs a lot of revision
             </Text>
@@ -94,7 +95,14 @@ export default function App() {
     const scheme = useColorScheme();
   return (
     <NavigationContainer theme={theme}>
-        <Drawer.Navigator initialRouteName="HomeScreen" screenOptions={{ headerShown: false, swipeEdgeWidth: Dimensions.get('window').width * 0.8, drawerStyle: {backgroundColor: '#000'}}}>
+        <Drawer.Navigator 
+            initialRouteName="HomeScreen" 
+            screenOptions={{ 
+                headerShown: false, 
+                swipeEdgeWidth: Dimensions.get('window').width * 0.8, 
+                drawerStyle: {
+                    backgroundColor: '#191919', 
+                    drawerActiveTintColor: '#fff'}}}>
             <Drawer.Screen name="HomeScreen" component={HomeScreen} options={{ title: "Home"}}/>
             <Drawer.Screen name="ClassScreen" component={ClassScreen} options={{ title: "Classes"}}/>
             <Drawer.Screen name="SpeciesScreen" component={SpeciesScreen} options={{ title: "Species"}}/>

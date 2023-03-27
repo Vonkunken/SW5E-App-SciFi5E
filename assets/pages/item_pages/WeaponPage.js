@@ -63,47 +63,36 @@ export default function WeaponPage({ navigation }) {
   
   function iconChecker(weaponType) {
     if(weaponType === "MartialBlaster" || weaponType === "SimpleBlaster") {
-        return <MaterialCommunityIcons name="pistol" size={Dimensions.get('window').width * 0.1} color="white" style="item3"/>
+        return <MaterialCommunityIcons name="pistol" size={Dimensions.get('window').width * 0.1} color="#fff"/>
     } else {
-        return <MaterialCommunityIcons name="sword" size={Dimensions.get('window').width * 0.1} color="white" style="item3"/>
+        return <MaterialCommunityIcons name="sword" size={Dimensions.get('window').width * 0.1} color="#fff"/>
     }
   }
 
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#000',
+      backgroundColor: '#252525',
       alignItems: 'center',
       justifyContent: 'center',
     },
     item: {
         padding: 4,
-        borderRadius: 4,
-        borderWidth: 2,
-        borderColor: "#941a1d",
-        backgroundColor: '#595959',
+        borderBottomWidth: 2,
+        borderBottomColor: "#941a1d",
+        borderLeftWidth: 2,
+        borderLeftColor: "#941a1d",
         width: Dimensions.get('window').width * 0.5,
       },
       item2: {
         padding: 4,
-        borderRadius: 4,
-        borderWidth: 2,
-        borderColor: "#941a1d",
-        backgroundColor: '#595959',
+        borderBottomWidth: 2,
+        borderBottomColor: "#941a1d",
         width: Dimensions.get('window').width * 0.4,
-      },
-      item3: {
-        padding: 4,
-        borderRadius: 4,
-        borderWidth: 2,
-        borderColor: "#941a1d",
-        backgroundColor: '#595959',
-        width: Dimensions.get('window').width * 0.1,
       },
     text: {
         color: '#ffffff',
         alignItems: 'center',
-        fontSize: 24,
-        height: 32,
+        fontSize: 20,
     },
   });
