@@ -13,7 +13,7 @@ export default function WeaponDetailsPage({ route, navigation }) {
                 <View style={styles.item}><Text style={styles.text}>{thisItem.name}</Text></View>
                 <View style={styles.item2}><Text style={styles.text}>Type</Text></View>
                 <View style={styles.item}><Text style={styles.text}>{fixType(thisItem.weaponClassification)}</Text></View>
-                <View style={styles.item2}><Text style={styles.text}>Name</Text></View>
+                <View style={styles.item2}><Text style={styles.text}>Properties</Text></View>
                 <View style={styles.item}><Text style={styles.text}>{formatProperties(thisItem.properties)}</Text></View>
                 <View style={styles.item2}><Text style={styles.text}>Cost</Text></View>
                 <View style={styles.item}><Text style={styles.text}>{thisItem.cost}</Text></View>

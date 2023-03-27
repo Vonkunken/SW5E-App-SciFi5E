@@ -15,12 +15,11 @@ export default function ItemPage({ navigation }) {
                         Weapons
                     </Text>
                 </TouchableOpacity>
-                {/* <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('WeaponProperties')}>
-                    <Text>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('WeaponProperties')}>
+                    <Text style={styles.text}>
                         Weapon Properties
                     </Text>
-                </TouchableOpacity> */}
-                {/*this button is unneeded for SW5E, its here as I'm working on idea for my own personal version, ignore this for the time being*/}
+                </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Armor', { navigation })}>
                     <Text style={styles.text}>
                         Armor
@@ -37,8 +36,6 @@ export default function ItemPage({ navigation }) {
                     </Text>
                 </TouchableOpacity>
             </ScrollView>
-            
-            
         </SafeAreaView>
     );
   }

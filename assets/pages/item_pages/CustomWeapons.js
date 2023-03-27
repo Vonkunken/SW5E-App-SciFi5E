@@ -1,10 +1,11 @@
 import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 
+// this page was initially called CustomWeapons for a different purpose, unrelated to SW5E, it's name can stay the same to avoid accidently breaking anything, it wont be visible anyway. 
 export default function CustomWeapons({ navigation }) {
     return (
         <View style={styles.container}>
             <Text>
-                This page will explain the rational behind the weapon properties, what they do, and how to create your own weapons.
+                This page will display all the weapon properties and explain them.
             </Text>
         </View>
     );
