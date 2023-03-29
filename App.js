@@ -4,8 +4,9 @@ import { createStackNavigator} from '@react-navigation/stack';
 import { Dimensions, StyleSheet, Text, useColorScheme, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import ClassPage from "./assets/pages/class_pages/ClassPage";
-import BerserkerPage from "./assets/pages/class_pages/BerserkerPage";
+import ClassPage from './assets/pages/class_pages/ClassPage';
+import ClassDetailsPage from './assets/pages/class_pages/ClassDetails'
+import BerserkerPage from './assets/pages/class_pages/BerserkerPage';
 import EngineerPage from './assets/pages/class_pages/EngineerPage';
 import FighterPage from './assets/pages/class_pages/FighterPage';
 import GuardianPage from './assets/pages/class_pages/GuardianPage';
@@ -54,6 +55,7 @@ function ClassScreen() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false}}>
             <Stack.Screen name="Class" component={ClassPage} />
+            <Stack.Screen name="ClassDetails" component={ClassDetailsPage} />
             <Stack.Screen name="Berserker" component={BerserkerPage} />
             <Stack.Screen name="Engineer" component={EngineerPage} />
             <Stack.Screen name="Fighter" component={FighterPage} />

@@ -5,7 +5,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 export default function WeaponDetailsPage({ route, navigation }) {
     const { item } = route.params;
     const thisItem = JSON.parse(item);
-    console.log(thisItem);
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
@@ -94,7 +93,7 @@ export default function WeaponDetailsPage({ route, navigation }) {
         marginBottom: 4,
         width: Dimensions.get('window').width,
       },
-      item2: {
+    item2: {
         padding: 4,
         borderWidth: 2,
         borderColor: "#941a1d",

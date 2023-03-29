@@ -84,7 +84,7 @@ export default function WeaponPage({ navigation }) {
         borderLeftColor: "#941a1d",
         width: Dimensions.get('window').width * 0.5,
       },
-      item2: {
+    item2: {
         padding: 4,
         borderBottomWidth: 2,
         borderBottomColor: "#941a1d",
